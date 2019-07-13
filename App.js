@@ -65,6 +65,16 @@ export default class App extends Component {
           <Text style={styles.paragraph}>Location: {this.state.location}</Text> //using location from current state
           <Text style={styles.paragraph}>{this.state.lat}</Text> // using latitude from current state
           <Text style={styles.paragraph}>{this.state.lon}</Text> //using longitude from current state
+
+          <MapView>        
+              style={{flex: 1}}        
+              region={{       
+              latitude: this.state.lat,          
+              longitude: this.state.lon,          
+              latitudeDelta: 0.0922,          
+              longitudeDelta: 0.0421        }}    
+              showsUserLocation={true}      
+		      </MapView>
           
         </TouchableOpacity>
         
